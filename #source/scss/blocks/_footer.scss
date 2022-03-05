@@ -1,0 +1,13 @@
+.footer {
+
+   &__container {
+      padding: 30px 0;
+      text-align: center;
+
+      p {
+         @include adaptiv-font(20, 14);
+         line-height: 30/20 * 100%;
+         color: #606C84;
+      }
+   }
+}

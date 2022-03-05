@@ -1,0 +1,104 @@
+.hero {
+   @media (min-width:$md3+px) {
+      display: flex;
+      margin-bottom: 89px;
+   }
+
+   &__content {
+      @media (min-width:$md3+px) {
+         flex: 0 0 100%;
+      }
+   }
+
+   &__container {
+      @media (min-width:$md2+px) {
+         max-width: 1437px;
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+   }
+
+   &__body {
+      @media (max-width:$md3+px) {
+         text-align: center;
+      }
+
+      @media (min-width:$md3+px) {
+         width: 49%;
+         padding: 9px 6px 20px 0px;
+      }
+
+      @media (min-width:$md1+px) {
+         padding: 9px 70px 20px 0px;
+      }
+   }
+
+   &__title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      @include adaptiv-font(62, 28);
+      line-height: 120%;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+
+      @media (min-width:$md1+px) {
+         margin-bottom: 47px;
+      }
+
+      @media (min-width:1920px) {
+         font-size: 62px;
+      }
+   }
+
+   &__acent {
+      @include adaptiv-font(39, 18);
+      line-height: 47 / 39 * 100%;
+      font-weight: bold;
+      text-transform: capitalize;
+      color: $colorAcent;
+      letter-spacing: 1.9px;
+
+      @media (max-width:$md1+px) {
+         margin-bottom: 24px;
+      }
+
+      @media (min-width:$md1+px) {
+         margin-bottom: 62px;
+      }
+   }
+
+   &__text {
+      @include adaptiv-font(24, 14);
+      line-height: 29 / 24 * 100%;
+
+      @media (max-width:$md1+px) {
+         margin-bottom: 20px;
+      }
+
+      @media (min-width:$md1+px) {
+         margin-bottom: 64px;
+         max-width: 550px;
+      }
+   }
+
+   &__image {
+      @media (max-width:$md3+px) {
+         display: none;
+      }
+
+      @media (min-width:$md3+px) {
+         position: relative;
+         flex: 0 0 51%;
+         padding-bottom: 31.3%;
+         transform: translate(-100%, 0px);
+
+         img {
+            position: absolute;
+            padding: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+}

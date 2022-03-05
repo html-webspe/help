@@ -1,0 +1,180 @@
+//<МИКСИНЫ>===============================================================================================
+@import "ui/_mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import "ui/_fonts";
+//</Подключаем шрифты>=======================================================================================
+//<Подключаем переменные>=======================================================================================
+@import "_vars";
+//</Подключаем переменные>=======================================================================================
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $fontfamily;
+  font-weight: 400;
+  color: #000000;
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  &.loaded {}
+}
+
+.container {
+  width: 100%;
+  max-width: $containerMaxWidth;
+  min-width: $containerMinwidth;
+  padding: 0 $containerPadding;
+  margin: 0 auto;
+
+  @media (max-width:$md2+px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.page-main {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -9.97%, rgba(221, 227, 231, 0.76) 100%);
+}
+
+.page-text {
+  @include adaptiv-font(24, 16);
+  line-height: 31 / 24 *100%;
+  text-align: center;
+  border: 3px solid $colorAcent;
+  border-radius: 7px;
+  padding: 25px 10px;
+  margin-bottom: 60px;
+
+  @media (min-width:$md2+px) {
+    padding: 38px 230px 32px 230px;
+    margin-bottom: 89px;
+  }
+}
+
+.section__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  @include adaptiv-font(50, 24);
+  line-height: 60 / 50 * 100%;
+  text-align: center;
+  margin-bottom: 40px;
+
+  @media (min-width:$md3+px) {
+    margin-bottom: 69px;
+  }
+}
+
+.section {
+  margin-bottom: 70px;
+
+  @media (min-width:$md1+px) {
+    margin-bottom: 160px;
+  }
+}
+
+.pl {
+  padding-left: 32px;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+/*.container {
+  max-width: $mw + px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (max-width: $md1+px) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $md2+px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: $md3+px) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+*/
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "ui/_btn";
+@import "ui/_ui";
+
+@import "blocks/_header";
+@import "blocks/_hero";
+@import "blocks/_info";
+@import "blocks/_help";
+@import "blocks/_we";
+@import "blocks/_reviews";
+@import "blocks/_callback";
+@import "blocks/_contacts";
+
+
+@import "blocks/_footer";

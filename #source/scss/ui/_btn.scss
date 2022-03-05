@@ -1,0 +1,27 @@
+//<BUTTONS>====================================================================================================
+.btn {
+   display: inline-flex;
+   padding: 18px 27px;
+   background-color: $colorAcent;
+   color: #fff;
+   border-radius: 5px;
+   font-weight: 900;
+   @include adaptiv-font(26, 14);
+   line-height: 31 / 26 * 100%;
+   letter-spacing: 0.09em;
+   transition: 0.3s ease;
+
+   @media (max-width:$md2+px) {
+      padding: 14px 20px;
+   }
+
+   &:hover {
+      background-color: #dd1f0e;
+   }
+
+   &.fw {
+      width: 100%;
+   }
+}
+
+//</BUTTONS>====================================================================================================

@@ -1,0 +1,113 @@
+.contacts {
+   padding-bottom: 40px;
+   margin-bottom: 0;
+
+   @media (min-width:$md3+px) {
+      padding-bottom: 85px;
+   }
+
+   &__body {
+      @media (min-width:$md2+px) {
+         padding-left: 74px;
+         padding-right: 74px;
+      }
+   }
+
+   &__row {
+      text-align: center;
+
+      @media (min-width:$md3+px) {
+         display: flex;
+         justify-content: space-between;
+      }
+
+
+      &:first-child {
+         margin-bottom: 45px;
+
+         @media (min-width:$md2+px) {
+            margin-bottom: 85px;
+         }
+      }
+   }
+
+   &__phone,
+   &__mail,
+   &__location {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 18px;
+
+      &:after {
+         content: '';
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center;
+         margin-right: 12px;
+      }
+   }
+
+   &__phone {
+      &:after {
+         background-image: url(../img/icons/phone.svg);
+         width: 18px;
+         height: 18px;
+
+         @media (min-width:$md2+px) {
+            width: 32px;
+            height: 31px;
+         }
+      }
+
+   }
+
+   &__mail {
+      &:after {
+         background-image: url(../img/icons/mail.svg);
+         width: 18px;
+         height: 18px;
+
+         @media (min-width:$md2+px) {
+            height: 24px;
+            width: 32px;
+         }
+      }
+   }
+
+   &__location {
+      &:after {
+         background-image: url(../img/icons/location.svg);
+         width: 18px;
+         height: 18px;
+
+         @media (min-width:$md2+px) {
+            height: 39px;
+            width: 30px;
+         }
+      }
+   }
+
+
+   &__social-fb,
+   &__social-tw {
+      svg {
+         width: 30px;
+         height: 30px;
+         transition: transform 0.3s ease;
+
+         &:hover {
+            transform: scale(1.2);
+         }
+      }
+   }
+
+   &__social-tw {
+      margin-left: 40px;
+
+      svg {
+         width: 38px;
+      }
+   }
+}
