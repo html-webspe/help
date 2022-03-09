@@ -58,6 +58,7 @@
          @media (min-width:$md2+px) {
             width: 32px;
             height: 31px;
+            margin-top: -12px;
          }
       }
 
@@ -70,8 +71,9 @@
          height: 18px;
 
          @media (min-width:$md2+px) {
-            height: 24px;
+            height: 31px;
             width: 32px;
+            margin-top: -9px;
          }
       }
    }
@@ -85,6 +87,7 @@
          @media (min-width:$md2+px) {
             height: 39px;
             width: 30px;
+            margin-top: -15px;
          }
       }
    }

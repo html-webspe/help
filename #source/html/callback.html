@@ -1,4 +1,4 @@
-<section class="section callback">
+<section id="callback" class="section callback">
    <div class='container'>
       <div class="callback__body">
          <div class="callback__baner">
@@ -8,26 +8,43 @@
             <h3 class="callback__title">Залиште свій номер і ми передзвонимо,
                як тільки буде вільний оператор</h3>
 
-            <form class="callback__form form-callback">
+
+            <script type="text/javascript">var submitted = false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
+{window.location='https://pomocdlaukrainy.personnelservice.pl/senks.html';}"></iframe>
+            <form
+               action="https://docs.google.com/forms/d/e/1FAIpQLSduqb6jGpBGeRyMWJ85HZI-idJeTwKEy_iCRT049JddrxDkeg/formResponse"
+               method="post" target="hidden_iframe" onsubmit="submitted=true;" class="callback__form form-callback">
+
 
                <div class="form-callback__group">
+
                   <div class="form-callback__input">
-                     <input type="text" class="input" name="name" placeholder="Імʼя" required="">
+                     <input id="name" onchange="checkParams()" type="text" class="input"
+                        aria-describedby="i.desc.2093011010 i.err.2093011010" name="entry.445169702"
+                        placeholder="Імʼя*">
                   </div>
+
                   <div class="form-callback__input">
-                     <input type="tel" class="input" name="tel" placeholder="Телефон" required="">
+                     <input id="phone" onchange="checkParams()" type="tel" class="input"
+                        aria-describedby="i.desc.1105153305 i.err.1105153305" name="entry.682651287"
+                        placeholder=" Телефон*" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                     <span id="valid-msg" class="hide">✓ Valid</span>
+                     <span id="error-msg" class="hide"></span>
+                     <span id="input-error"></span>
                   </div>
                </div>
 
                <p class="form-callback__text">
                   Заповнивши форму, ви погоджуєтеся на отримання електронної пошти від персоналізованої служби. Згода
-                  може бути відкликана будь-коли. Подробиці, пов'язані з обробкою персональних даних, див. у політиці
-                  конфіденційності.
+                  може бути відкликана будь-коли. Подробиці, пов'язані з обробкою персональних даних, див. у <a
+                     href="https://personnelservice.pl/polityka-informacyjna/">політиці
+                     конфіденційності.</a>
                </p>
 
                <div class="checkbox">
                   <label class="checkbox__label">
-                     <input class="checkbox__input" type="checkbox" checked="">
+                     <input class="checkbox__input" type="checkbox" id="checkbox" onchange="checkParams()" checked>
                      <span class="checkbox__control">
                         <svg width="25" height="16">
                            <path
@@ -42,11 +59,30 @@
 
                <p class="form-callback__text pl">* Обʼязкове поле</p>
 
-               <button type="button" class="form-callback__button">Відправити</button>
+               <button id="form-button" type="submit" class="form-callback__button">Відправити</button>
 
             </form>
+
+
 
          </div>
       </div>
    </div>
+   <script>
+      function checkParams() {
+         const phoneInputValue = document.getElementById('phone').value,
+            nameInputValue = document.getElementById('name').value,
+            checkbox = document.getElementById('checkbox'),
+            buttonForm = document.getElementById('form-button');
+         buttonForm.disabled = true;
+
+
+         if (checkbox.checked && phoneInputValue.length != 0 && nameInputValue.length != 0) {
+            buttonForm.disabled = false;
+         }
+      };
+      checkParams();
+   </script>
 </section>
+
+<html>

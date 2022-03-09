@@ -1,19 +1,74 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
-	<title>Главная</title>
+	<title>ДопомогадляУкраїни</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/intlTelInput.min.css">
+
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+	<style>
+		.iti-flag {
+			background: url('img/flags.png');
+		}
+
+		@media(-webkit-min-devace-pixel-ratio),
+		(min-resolution:192dpi) {
+			.iti-flag {
+				background: url('img/flags@2x.png');
+			}
+		}
+
+		.iti {
+			width: 100%;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		.js-validate-error-label {
+			color: #000 !important;
+			font-size: 12px;
+			padding-top: 6px;
+			text-align: left;
+			position: absolute;
+			bottom: -20px;
+			left: 10px;
+		}
+
+		#valid-msg {
+			color: rgb(31, 148, 31);
+		}
+
+		.form-callback__input span {
+			position: absolute;
+			bottom: -20px;
+			left: 10px;
+			font-size: 12px;
+		}
+
+		.form-callback__button:disabled {
+			opacity: 0.3;
+			cursor: unset;
+		}
+
+		.form-callback__button:disabled:hover {
+			color: #fff;
+			background-color: unset;
+			border: 3px solid #fff;
+		}
+	</style>
 </head>
 
 <body>
@@ -25,7 +80,7 @@
 			<div class='container'>
 				<div class="page-text">
 					<p>
-						Відчуття безпеки&nbsp;&mdash; це&nbsp;одне це&nbsp;одне з&nbsp;першочергових потреб людини.
+						Відчуття безпеки&nbsp;&mdash; це&nbsp;одне з&nbsp;першочергових потреб людини.
 						<b>Pracodawcy RP&nbsp;</b>разом із&nbsp;Групою <b>Personnel Service</b> солідарні з&nbsp;Україною.
 						Тому <b>пропонуємо Вам підтримку та&nbsp;допомогу</b> з&nbsp;тим,
 						у&nbsp;чому ми&nbsp;найбільше компетентні&nbsp;&mdash; у&nbsp;пошуку роботи.

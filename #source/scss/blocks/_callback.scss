@@ -16,7 +16,7 @@
 
    &__baner {
       @media (max-width:$md3+px) {
-         margin-bottom: 30px;
+         display: none;
       }
 
       @media (min-width:$md3+px) {
@@ -50,8 +50,8 @@
    }
 
    &__title {
-      font-family: 'Poppins'sans-serif;
-      font-weight: bold;
+
+      font-weight: 900;
       @include adaptiv-font(32, 20);
       line-height: 42/32 * 100%;
       text-align: center;
@@ -71,13 +71,15 @@
       @media (min-width:$md2+px) {
          display: flex;
          column-gap: 30px;
-         margin-bottom: 20px;
+         margin-bottom: 30px;
       }
    }
 
    &__input {
+      position: relative;
+
       @media (max-width:$md2+px) {
-         margin-bottom: 16px;
+         margin-bottom: 24px;
       }
 
       @media (min-width:$md2+px) {
@@ -113,6 +115,14 @@
       color: #FFFFFF;
       text-align: left;
       margin-bottom: 21px;
+
+      a {
+         transition: color 0.3s ease;
+
+         &:hover {
+            color: #000;
+         }
+      }
    }
 
    &__button {
@@ -131,7 +141,6 @@
 
       &:hover {
          border: 3px solid $colorAcent;
-         background-color: #FFFFFF;
          color: #000;
       }
    }
